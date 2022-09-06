@@ -56,6 +56,6 @@ int main(){
     for(int i=0; i<7; i++){
         cout<<m1[i]<<' ';
     }
-    // output: 1123468
+    // output: 1 1 2 3 4 6 8 
     cout<<endl;
 }
