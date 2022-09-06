@@ -43,7 +43,7 @@ void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
             i1++;
         }
     }
-    
+
     for (int r=0; r<(m+n); r++){
         nums1[r]=res[r];
     }
@@ -54,7 +54,8 @@ int main(){
     vector<int> m2={1,2,3};
     merge(m1,4,m2,3);
     for(int i=0; i<7; i++){
-        cout<<m1[i];
+        cout<<m1[i]<<' ';
     }
+    // output: 1123468
     cout<<endl;
 }
