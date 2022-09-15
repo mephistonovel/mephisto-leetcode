@@ -1,8 +1,8 @@
 /******************************************************************************
 
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
+Runtime: 2940 ms, faster than 5.01% of C++ online submissions for Sort an Array.
+Memory Usage: 349.9 MB, less than 5.01% of C++ online submissions for Sort an Array.
+Next challenges:
 
 *******************************************************************************/
 
