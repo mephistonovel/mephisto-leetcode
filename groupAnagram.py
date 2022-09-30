@@ -5,6 +5,7 @@ def groupAnagrams(strs):
     :rtype: List[List[str]]
     Runtime: 3414 ms, faster than 5.00% of Python online submissions for Group Anagrams.
     Memory Usage: 17.3 MB, less than 89.37% of Python online submissions for Group Anagrams.
+    https://leetcode.com/problems/group-anagrams/submissions/ 
     """
     res_dict = dict()
 
