@@ -1,6 +1,7 @@
 
 def groupAnagrams(strs):
     """
+    딕테이션이 핵심!!
     :type strs: List[str]
     :rtype: List[List[str]]
     Runtime: 3414 ms, faster than 5.00% of Python online submissions for Group Anagrams.
