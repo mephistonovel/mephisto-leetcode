@@ -1,8 +1,10 @@
 
-def groupAnagrams(self, strs):
+def groupAnagrams(strs):
     """
     :type strs: List[str]
     :rtype: List[List[str]]
+    Runtime: 3414 ms, faster than 5.00% of Python online submissions for Group Anagrams.
+    Memory Usage: 17.3 MB, less than 89.37% of Python online submissions for Group Anagrams.
     """
     res_dict = dict()
 
@@ -16,6 +18,10 @@ def groupAnagrams(self, strs):
 
     return res_dict.values()
   
-if __
+if __name__ == '__main__':
+    test =["eat","tea","tan","ate","nat","bat"]
+    print(groupAnagrams(test))
+    
+    """output: [["tan","nat"],["bat"],["eat","tea","ate"]]"""
 
         
