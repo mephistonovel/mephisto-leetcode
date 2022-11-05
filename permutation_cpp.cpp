@@ -1,6 +1,8 @@
 // https://github.com/keineahnung2345/leetcode-cpp-practices/blob/master/46.%20Permutations.cpp
 
-void dfs(vector<int> & prev, vector<vector<int>>& res,vector<int>&elements){
+class Solution {
+public:
+    void dfs(vector<int> & prev, vector<vector<int>>& res,vector<int>&elements){
             if (elements.size()==prev.size()){
                 res.push_back(prev);
             }
@@ -15,3 +17,11 @@ void dfs(vector<int> & prev, vector<vector<int>>& res,vector<int>&elements){
                 }
             }
         }
+
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<int> prev;
+        vector<vector<int>> res;
+        dfs(prev,res,nums);
+        return res;   
+    }
+};
