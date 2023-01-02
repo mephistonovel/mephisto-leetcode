@@ -11,7 +11,7 @@ public:
         for (int i=0;i<nums.size();i++){
             num1 = nums[i];
             num2 = target - num1;
-            for (int j=0;j<nums.size();j++){
+            for (int j=i;j<nums.size();j++){
                 if ((num2==nums[j]) && (i!=j)){
                     answer[0] = i;
                     answer[1] = j;
