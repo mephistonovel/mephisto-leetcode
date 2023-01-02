@@ -9,13 +9,14 @@ class Solution(object):
         index1=-1
         index2=0
         check = True
-        for num1 in nums:
-            num2_can = target - num1
+        length = len(nums)
+        for i in range(length):
+            num2_can = target - nums[i]
             index1+=1
-            for index22,num2 in enumerate(nums):
-                if (num2 == num2_can) and (index1 != index22):
+            for j in range(i,length):
+                if (nums[j] == num2_can) and (i != j):
                     # print(index22,num2)
-                    index2=index22
+                    index2=j
                     check = False
                     break
             if (check == False):
