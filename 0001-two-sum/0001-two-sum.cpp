@@ -7,11 +7,12 @@ public:
         
         int num1;
         int num2;
+        int len = nums.size();
         bool check=0;
-        for (int i=0;i<nums.size();i++){
+        for (int i=0;i<len;i++){
             num1 = nums[i];
             num2 = target - num1;
-            for (int j=i;j<nums.size();j++){
+            for (int j=i;j<len;j++){
                 if ((num2==nums[j]) && (i!=j)){
                     answer[0] = i;
                     answer[1] = j;
