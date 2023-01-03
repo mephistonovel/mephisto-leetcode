@@ -68,18 +68,12 @@ class Solution:
             if l1==None:
                 l1 = None
             else:
-                if l1.next==None:
-                    l1=None
-                else:
-                    l1=l1.next 
+                l1=l1.next 
                     
             if l2==None:
                 l2 = None
             else:
-                if l2.next==None:
-                    l2=None
-                else:
-                    l2=l2.next 
+                l2=l2.next 
 
         
         return ans.next
