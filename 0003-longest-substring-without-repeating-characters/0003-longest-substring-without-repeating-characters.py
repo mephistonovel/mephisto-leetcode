@@ -35,48 +35,4 @@ class Solution:
             print('lengths',lengths)
             
             return max(lengths) if len(lengths)>0 else 1 
-            
-            
-        # else:
-        #     lengths = [] # length 기록 
-        #     tmp = [] # 임시 컨테이너 for 중복문자 확인 
-        #     for char in s:
-        #         if char not in tmp:
-        #             tmp.append(char)
-        #         else:
-        #             print('tmp',tmp)
-        #             length = len(tmp)
-        #             lengths.append(length)
-        #             # length기록 후 지우기 
-        #             tmp=[]
-        #             tmp.append(char)
-        #     lengths.append(len(tmp))
-        #     print('lenghts',lengths)
-        #     return max(lengths) if len(lengths)>0 else 1
-        
-        
-            
-            
-            
-            
-        
-#             char = s[i]
-#             if (char!=prev):
-#                 if (char not in ans.keys()):
-#                     ans[anchor]+=1
-#                 else:
-                    
-#             else:
-#                 if (char not in ans.keys()):
-#                     anchor = char
-#                     ans[anchor]=1
-#                 else:
-                    
-            # if (char != prev):
-            #     ans[char] +=1 
-            # else:
-            #     ans[char]=1
-            # prev = char
-        
-#         return max(ans.values())
         
