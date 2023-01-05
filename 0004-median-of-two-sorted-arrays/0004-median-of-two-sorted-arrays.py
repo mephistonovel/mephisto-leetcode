@@ -14,7 +14,6 @@ class Solution:
         else:
             med_idx = med_
         
-        i3 = 0
         while (i1<len1 and i2<len2):
             if nums1[i1] < nums2[i2]:
                 ans.append(nums1[i1])
@@ -22,17 +21,15 @@ class Solution:
             else:
                 ans.append(nums2[i2])
                 i2+=1   
-            # i3+=1
+
         
         
         while (i1<len1):
             ans.append(nums1[i1])
-            # i3+=1
             i1+=1
 
         while (i2<len2):
             ans.append(nums2[i2])
-            # i3+=1
             i2+=1
             
         
