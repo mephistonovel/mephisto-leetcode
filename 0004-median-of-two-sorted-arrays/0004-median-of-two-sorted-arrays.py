@@ -35,7 +35,6 @@ class Solution:
             # i3+=1
             i2+=1
             
-        print(ans)
         
         return ans[med_idx] if rest == 1 else (ans[med_idx1]+ans[med_idx2])/2
         
