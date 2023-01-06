@@ -14,7 +14,6 @@ class Solution:
             else:
                 return s[0]
         else:
-            # lengths = []
             length = 0
             for i in range(len(s)):
                 len1,l1 = check(s,i,i)
