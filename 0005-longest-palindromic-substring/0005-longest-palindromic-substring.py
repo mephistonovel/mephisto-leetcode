@@ -9,12 +9,6 @@ class Solution:
         # 예외 처리1 : string이 1글자짜리나 0글자짜리
         if len(s) <= 1:
             return s
-        # #예외 처리2 : string이 2글자짜리 
-        # elif len(s) == 2:
-        #     if s[0] == s[1]:
-        #         return s
-        #     else:
-        #         return s[0]
         # 일반적인 케이스 
         else:
             length = 0
