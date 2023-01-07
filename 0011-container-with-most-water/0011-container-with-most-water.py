@@ -3,6 +3,7 @@ class Solution:
         init = 0 
         end = len(height)-1
         ans = 0
+        
         while (init < end):
             size = (end-init)*min(height[init],height[end])
             if ans<size:
