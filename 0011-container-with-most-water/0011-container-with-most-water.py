@@ -7,15 +7,12 @@ class Solution:
             size = (end-init)*min(height[init],height[end])
             if ans<size:
                 ans = size
-                if height[init]<height[end]:
-                    init+=1
-                else:
-                    end-= 1
+                
+            if height[init]<height[end]:
+                init+=1
             else:
-                if height[init]<height[end]:
-                    init+=1
-                else: 
-                    end -=1 
+                end-= 1
+
                 
         return ans 
 #         length = len(height)
