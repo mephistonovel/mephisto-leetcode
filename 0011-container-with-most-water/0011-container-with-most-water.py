@@ -13,7 +13,6 @@ class Solution:
                 init+=1
             else:
                 end-= 1
-                
         return ans 
     
 #         length = len(height)
