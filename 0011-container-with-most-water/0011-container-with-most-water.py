@@ -15,6 +15,7 @@ class Solution:
 
                 
         return ans 
+    
 #         length = len(height)
 #         ans = 0
 #         for i in range(length):
