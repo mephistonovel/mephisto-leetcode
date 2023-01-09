@@ -8,7 +8,7 @@ class Solution:
             cand = nums[i]
             if (nums[i]>0):
                 break
-            if (i>0) and (nums[i]==nums[i-1]):
+            if (i>0) and (nums[i]==nums[i-1]): #이게 포인트네 ㅎㅎ 같으면 넘기기
                 i+=1
                 continue
             # if cand not in record:
@@ -30,7 +30,7 @@ class Solution:
 
                     low_standard = nums[next]
                     high_standard = nums[high]
-                    while (next<high) and (nums[next] == low_standard):
+                    while (next<high) and (nums[next] == low_standard): #이거도 포인트
                         next +=1
                     while (next<high) and (nums[high] == high_standard):
                         high -=1 
