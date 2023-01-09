@@ -1,7 +1,6 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         ans = []
-        record =set()
         i=0
         nums = sorted(nums)
         while i<len(nums):
@@ -11,8 +10,6 @@ class Solution:
             if (i>0) and (nums[i]==nums[i-1]): #이게 포인트네 ㅎㅎ 같으면 넘기기
                 i+=1
                 continue
-            # if cand not in record:
-                # rest1 = 0-cand
                 
             next = i+1
             high = len(nums)-1
@@ -25,8 +22,7 @@ class Solution:
                     next +=1
                 else:
                     candidate = [cand,nums[next],nums[high] ]
-                    ans.append(candidate)
-                    record.update(candidate)      
+                    ans.append(candidate) 
 
                     low_standard = nums[next]
                     high_standard = nums[high]
