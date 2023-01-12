@@ -7,11 +7,11 @@ class Solution:
         maxval = 0
         
         for r in range(len(s)):
-            ans[s[r]] = ans.get(s[r],0)+1 
+            ans[s[r]] = ans.get(s[r],0)+1  # if s[r] in ans.keys(): ans[s[r]] +=1 
             
             # 중복 발생 
             while ans[s[r]]>1:
-                ans[s[l]] -= 1 # 원래 있던 애는 이제 옮겨 가니까 뺀다? 
+                ans[s[l]] -= 1 # 원래 있던 애는 이제 옮겨 가니까 뺀다?  # abc 'a' ans ['a'] -=1  l +=1 
                 l +=1 
             
             maxval = max(maxval,r-l+1)
