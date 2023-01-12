@@ -57,7 +57,6 @@ class Solution:
                 curr = curr.next
                 pos+=1
 
-        
         return ans.next
                 
         
