@@ -24,6 +24,7 @@ class Solution:
     
             if len(digits) == 0:
                 return []
+            
             ans = []
             
             length = len(digits)
@@ -45,7 +46,7 @@ class Solution:
                     return True
                 
                 for char in dg[digits[index]]:
-                    print(tmp)
+                    # print(tmp)
                     tmp += char
                     dfsol(index+1,tmp)
                     tmp = tmp[:-1]
