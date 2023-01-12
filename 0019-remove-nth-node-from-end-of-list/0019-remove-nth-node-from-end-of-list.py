@@ -26,12 +26,9 @@ class Solution:
         while curr: 
             curr= curr.next
             length+=1
-        
-        print(length)
-        
+                
         stop_pos = length - n
-        print(stop_pos)
-    
+
         
         curr = ans.next
         pos = 0
