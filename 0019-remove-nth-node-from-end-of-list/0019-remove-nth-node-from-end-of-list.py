@@ -22,6 +22,8 @@ class Solution:
         # if n>len/2: len-n의 애를 끊고...
         # if n<len/2: len-n의애를 끊고.... or 
         
+        # 3 case: sll의 원소가 1개 / n=1 / 그 외 
+        
         length = 0
         while curr: 
             curr= curr.next
@@ -45,7 +47,7 @@ class Solution:
         else:
             while curr:
                 if pos == stop_pos:
-                    tmp = curr.next.val if curr.next else None
+                    tmp = curr.next.val 
                     tmp_n = curr.next.next 
                     curr.val = tmp
                     curr.next = tmp_n
