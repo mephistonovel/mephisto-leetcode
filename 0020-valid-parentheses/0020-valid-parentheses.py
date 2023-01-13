@@ -1,13 +1,13 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        if len(s) ==1:
-            return False 
+        # if len(s) ==1:
+        #     return False 
         
         
         
         brackets = {"(":")","{":"}","[":"]"}
-        reverse_brackets = {")":"(", "}":"{", "]":"["}
-        left = set( ["(", "{", "["] )
+        # reverse_brackets = {")":"(", "}":"{", "]":"["}
+        # left = set( ["(", "{", "["] )
         valid = []
             
 
