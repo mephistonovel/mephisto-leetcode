@@ -12,8 +12,8 @@ class Solution:
         evens = []
         if not curr:
             return None
-#        if not curr.next:
- #           return curr
+        if not curr.next:
+            return curr
         
         
         while curr:
