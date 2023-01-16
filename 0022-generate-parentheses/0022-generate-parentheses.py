@@ -3,7 +3,6 @@ class Solution:
         ans = []
         
         def dfsol(open,close,st,ans):
-            print(st)
             if (open==0 and close ==0):
                 ans.append(st)
                 return
