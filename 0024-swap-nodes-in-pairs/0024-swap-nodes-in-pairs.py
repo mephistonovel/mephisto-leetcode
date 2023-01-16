@@ -28,8 +28,8 @@ class Solution:
         
         curr = ans.next
         
-        for i in range(len(evens)):
-            curr.val = evens[i]
+        for j in range(len(evens)):
+            curr.val = evens[j]
             curr = curr.next.next
         
         return ans.next
