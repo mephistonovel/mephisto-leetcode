@@ -31,7 +31,7 @@ class Solution:
         
         return ans
             
-            
+#https://leetcode.com/problems/merge-k-sorted-lists/discuss/2878522/Divide-and-conquer-solution-python#
         
         
         
