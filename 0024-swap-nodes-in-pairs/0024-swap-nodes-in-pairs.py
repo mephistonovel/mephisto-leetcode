@@ -33,7 +33,31 @@ class Solution:
             curr = curr.next.next
         
         return ans.next
-            
+    
+    # Definition for singly-linked list.
+    
+##################     
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+class Solution:
+
+    def swapPairs(self, head:ListNode) -> ListNode:
+        if not head or not head.next:
+            return head
+        start=front = ListNode(None)
+        front.next = head
+        while head and head.next:
+            temp = head.next
+            head.next = temp.next
+            temp.next = head
+            front.next = temp
+            head = head.next
+            front= front.next.next
+        return start.next
+
+ ##################
                 
                 
         
