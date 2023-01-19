@@ -1,3 +1,5 @@
+### binary search 이용. 단 중복이 있을 수 있으니 한 번 찾아도 binary search 다른 범위에 대해 진행 
+
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         ans = []
