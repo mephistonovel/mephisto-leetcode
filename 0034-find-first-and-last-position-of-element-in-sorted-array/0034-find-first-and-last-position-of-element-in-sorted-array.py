@@ -21,33 +21,7 @@ class Solution:
                     bsearch(num_list,targ,ans,tmp_mid1,init,mid_point)
                     bsearch(num_list,targ,ans,tmp_mid2,mid_point+1,end)
                     return None
-                
-#             mid_index = len(num_list)//2
-#             # abs_index = 
-           
-#             if num_list:
-#                 print(num_list)
-#                 print('ans',ans)
-#                 print('mid',mid_index)
-                
-#                 if targ>num_list[mid_index]:
-#                     bsearch(num_list[mid_index+1:],targ,ans,check)
-#                     check+=1
-#                 elif targ<num_list[mid_index]:
-#                     # print(num_list[:mid_index])
-#                     bsearch(num_list[:mid_index],targ,ans,check)
-#                 else:
-#                     # print(check)
-#                     # if check >0:
-#                     #     ans.append(mid_index+check)
-#                     # else:
-#                     #     ans.append(mid_index)   
-#                     ans.append(mid_index)
-#                     bsearch(num_list[:mid_index],targ,ans,check)
-#                     bsearch(num_list[mid_index+1:],targ,ans,check)
-#             else:
-#                 return None
-        
+                        
         bsearch(nums,target,ans,mid_point,init,end)
         
         if ans:
