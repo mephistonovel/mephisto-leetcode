@@ -30,28 +30,3 @@ class Solution:
             
             
             
-
-            
-        return max_val 
-                
-                
-#         def pair_valid(s,ans):
-#             pair = '()'
-#             # print(s)
-#             print(ans)
-#             if pair in s:
-#                 origin = len(s)
-#                 new = len(s.replace(pair,''))
-#                 reduce = origin-new
-#                 # print(reduce)
-                
-#                 return pair_valid(s.replace(pair,''),ans+reduce)
-#             else: 
-#                 return ans
-        
-        # return pair_valid(s,ans)
-            
-                
-        
-        
-        
