@@ -7,7 +7,7 @@ class Solution:
         ans = []
         tmp = []
         
-        candidates.sort()
+        # candidates.sort()
         
         def part(start,tmp,sum_sofar):
             if sum_sofar==target:
@@ -20,9 +20,7 @@ class Solution:
                     num = candidates[i]
                     tmp.append(num)
                     sum_sofar+= num
-                    # level+=1
                     part(i, tmp,sum_sofar)
-                    # level-=1
                     sum_sofar-= num
                     
                     tmp.pop()
