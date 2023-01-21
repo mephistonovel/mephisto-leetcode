@@ -16,33 +16,25 @@ class Solution:
         
         def findrot(nums,start,end,mid,rot):
             if nums[start:end]:
-                print('rot',rot)
-                print('median',nums[mid])
-                print(rot>nums[mid])
+                # print('rot',rot)
+                # print('median',nums[mid])
+                # print(rot>nums[mid])
                 
                 if rot>nums[mid] and nums[mid]<nums[mid-1]:
-                    print('kk')
                     ans.append(mid)
                     return
                 elif rot>nums[mid]:
-                    print('kkk')
-                    print(end-start)
                     
                     if (end-start) % 2 ==1:
-                        print(mid-(end-1-mid))
                         new_start = mid -(end-1-mid)
                     else:
-                        print('why')
                         new_start = mid-(end-1-mid)-1
                         
                     new_mid = new_start + (mid-new_start)//2
-                    print('nsm',new_start,mid,new_mid)
                     findrot(nums,new_start,mid,new_mid,rot)
                     
                 else: #rot<nums[mid]:
                     new_mid = mid+1 + (end-(mid+1))//2
-                    print('update',new_mid)
-                    print('inputs',mid+1,end,new_mid)
                     findrot(nums,mid+1,end,new_mid,rot)
                     
             
@@ -65,16 +57,12 @@ class Solution:
         mid = len(nums)//2
         findrot(nums,0,length,mid,rot)
         rot_end = ans[0] if ans else None
-        print('rotend',rot_end)
         
         if rot_end:
 
             left = nums[:rot_end] #더 큰쪽
             right = nums[rot_end:] #더 작은쪽
             final = []
-            print(left)
-            print(right)
-            print(target>=right[-1])
             
             if target>right[-1]:
                 # print(left)
