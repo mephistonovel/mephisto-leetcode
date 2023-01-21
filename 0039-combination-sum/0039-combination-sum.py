@@ -7,7 +7,7 @@ class Solution:
         ans = []
         tmp = []
         
-        # candidates.sort()
+        candidates.sort()
         
         def part(start,tmp,sum_sofar):
             if sum_sofar==target:
