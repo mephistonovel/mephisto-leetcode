@@ -4,8 +4,6 @@ class Solution:
             return 0
         
         stack = []
-        # ans = 0
-        # pair = {'(':')'}
         stack.append(-1)
         max_val = 0
         
