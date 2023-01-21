@@ -65,14 +65,12 @@ class Solution:
             final = []
             
             if target>right[-1]:
-                # print(left)
                 start = 0
                 end = len(left)
                 mid = len(left)//2
                 bsearch(left,start,end,mid,target)
                 answer = final[0] if final else -1
             else:
-                # print(right)
                 start = 0
                 end = len(right)
                 mid = len(right)//2
