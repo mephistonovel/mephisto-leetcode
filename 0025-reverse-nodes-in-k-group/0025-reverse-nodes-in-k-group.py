@@ -16,11 +16,11 @@ class Solution:
         
         while curr:
             if i == k:
-                new_cur = final = q.popleft()
+                new_cur = q.popleft()
             
                 first = curr #처음으로 갈 거 받아놓기    
 
-                final.next = curr.next
+                new_cur.next = curr.next
                 curr = curr.next
                 
                 tmp_cur = new_cur
