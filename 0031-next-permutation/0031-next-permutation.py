@@ -21,9 +21,5 @@ class Solution:
                         swap_pos = j
                         nums[i-1], nums[swap_pos] = nums[swap_pos],nums[i-1]
                         return nums
-                        # break 
-                
-                
-                
-                # return nums
+            
         
