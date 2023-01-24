@@ -27,7 +27,6 @@ class Solution:
         # 이 예외처리가 ㅋㅋㅋ
         if mid==-1:
             return 0
-        
         #일반        
         if nums[mid]>target:
             return mid     
