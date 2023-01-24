@@ -11,7 +11,6 @@ class Solution:
             s = nums[init]
             e = nums[end]
             m = nums[mid]
-            print(mid)
             
             if target>m:
                 init = mid+1
