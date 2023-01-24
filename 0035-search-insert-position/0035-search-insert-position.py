@@ -4,7 +4,6 @@ class Solution:
         init = 0
         end = len(nums)-1
         mid = end//2
-        check = 0
         
         while init<=end:        
             m = nums[mid]
@@ -12,12 +11,10 @@ class Solution:
             if target>m:
                 init = mid+1
                 mid = init + (end-init)//2
-                check = 1
             
             elif target<m:
                 end = mid-1
                 mid = init + (end-init)//2
-                check = 0
             
             else:
                 return mid 
