@@ -33,8 +33,6 @@ class Solution:
             return mid     
         else:
             return mid+1
-        
-            
 
         
             
