@@ -4,6 +4,7 @@ class Solution:
         end = len(nums)-1
         mid = end//2
         
+        
         while init<=end:        
             m = nums[mid]
             
