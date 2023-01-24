@@ -35,19 +35,6 @@ class Solution:
             return mid+1
         
             
-        
-        # if mid == 0 and check:
-        #     return mid+1
-        # elif mid == 0 and (not check):
-        #     return mid
-        # elif (mid == len(nums)-1) and check:
-        #     return len(nums)
-        # elif (mid == len(nums)-1) and (not check):
-        #     return mid
-        # elif not check:
-        #     return mid+1
-        # else:
-        #     return mid
-        
+
         
             
