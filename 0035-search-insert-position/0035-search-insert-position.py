@@ -1,6 +1,5 @@
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
-        
         init = 0
         end = len(nums)-1
         mid = end//2
