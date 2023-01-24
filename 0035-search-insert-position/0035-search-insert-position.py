@@ -6,10 +6,9 @@ class Solution:
         mid = end//2
         check = 0
         
-        while init<=end:
-            
-            s = nums[init]
-            e = nums[end]
+        while init<=end:            
+#             s = nums[init]
+#             e = nums[end]
             m = nums[mid]
             
             if target>m:
