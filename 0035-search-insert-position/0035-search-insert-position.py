@@ -1,9 +1,10 @@
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
+        
         init = 0
         end = len(nums)-1
         mid = end//2
-        
+        check = 0
         
         while init<=end:        
             m = nums[mid]
@@ -11,14 +12,18 @@ class Solution:
             if target>m:
                 init = mid+1
                 mid = init + (end-init)//2
+                check = 1
             
             elif target<m:
                 end = mid-1
                 mid = init + (end-init)//2
+                check = 0
             
             else:
                 return mid 
             
+
+        
         # 이 예외처리가 ㅋㅋㅋ
         if mid==-1:
             return 0
