@@ -6,24 +6,24 @@ class Solution:
         nums.sort()
         mid = 0
         
-        med = len(nums)//2
-        if min(nums)>0:
-            mid = 0
-        elif nums[med]>0:
-            while med>0 and nums[med]>0:
-                med -= 1
-            mid = med+1
-        else:        
-            while med < len(nums) and nums[med]<=0:
-                med+=1
-            mid = med
+        # med = len(nums)//2
+        # if min(nums)>0:
+        #     mid = 0
+        # elif nums[med]>0:
+        #     while med>0 and nums[med]>0:
+        #         med -= 1
+        #     mid = med+1
+        # else:        
+        #     while med < len(nums) and nums[med]<=0:
+        #         med+=1
+        #     mid = med
 
         
             
-#         for i in range(len(nums)):
-#             if nums[i]>0:
-#                 mid = i
-#                 break       
+        for i in range(len(nums)):
+            if nums[i]>0:
+                mid = i
+                break       
                 
         return self.check(nums[mid:])
             
