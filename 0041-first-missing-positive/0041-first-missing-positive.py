@@ -16,7 +16,7 @@ class Solution:
         else:        
             while med < len(nums) and nums[med]<=0:
                 med+=1
-            print(med)
+            # print(med)
             mid = med
 
         
