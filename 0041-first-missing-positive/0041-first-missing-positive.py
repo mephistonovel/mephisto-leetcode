@@ -10,8 +10,7 @@ class Solution:
             if nums[i]>0:
                 mid = i
                 break       
-
-        print(nums[mid:])
+                
         return self.check(nums[mid:])
             
     def check(self,positives):
