@@ -51,6 +51,7 @@ class Solution:
         
         return save
 
+    
 ### 위에거를 reversed와 nested list를 이용해 implement ###
 # def trap(self, height: List[int]) -> int:
 #         curr_max = 0
