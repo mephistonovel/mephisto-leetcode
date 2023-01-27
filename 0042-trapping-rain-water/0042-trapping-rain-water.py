@@ -47,11 +47,18 @@ class Solution:
                 while re != right:
                     save += tmp_max2 - height[right]
                     right-=1
-                tmp_max2 = height[re]
-                            
-            
+                tmp_max2 = height[re]           
         
         return save
+
+### 위에거를 reversed와 nested list를 이용해 implement ###
+# def trap(self, height: List[int]) -> int:
+#         curr_max = 0
+#         max_left = [curr_max:= max(curr_max, h) for h in height]
+#         curr_max = 0
+#         max_right = [curr_max:= max(curr_max, h) for h in reversed(height)]
+#         max_right.reverse()
+#         return sum([min(max_left[i], max_right[i]) - height[i] for i in range(len(height))])
             
                 
             
