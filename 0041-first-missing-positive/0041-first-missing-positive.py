@@ -31,9 +31,7 @@ class Solution:
         if positives[0]>1:
             return 1
         else:
-            if len(positives)==1:
-                return 2
-            elif positives[1]-positives[0]>1:
+            if len(positives)==1 or positives[1]-positives[0]>1:
                 return 2
             else:
                 i=1
