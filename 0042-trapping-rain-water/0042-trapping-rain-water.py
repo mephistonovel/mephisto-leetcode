@@ -11,18 +11,15 @@ class Solution:
         while height[l] == 0:
             l+=1 
         
-        print('l',l)
         length = len(height)
         tmp_max = height[l]
         start = l+1
         rev = 0
-        print('tmp_max',tmp_max)
         
+        # l, r 을 앞에서부터 forward
         for r in range(start,len(height)):
-            # print(height[r]>=tmp_max)
+  
             if height[r]>= tmp_max:
-                print('l',l)
-                print('r',r)
                 l+=1
                 while l!=r:
                     save += tmp_max - height[l]
@@ -34,6 +31,7 @@ class Solution:
         if rev == length -1:
             return save
         
+        # 한번 max나오면 이후로 안나오므로, 거꾸로 돌되 해당 max까지 돌게 함. 
         
         right = len(height)-1
         while height[right] == 0:
@@ -41,15 +39,12 @@ class Solution:
             
         rev_start = right
         tmp_max2 = height[right]
-        print(tmp_max2)
-        print('rev',rev)
+
         for re in range(rev_start-1,rev-1,-1):
             if height[re]>=tmp_max2:
                 right-=1
-                # print(right)
-                print('re',re)
+
                 while re != right:
-                    print('right',right)
                     save += tmp_max2 - height[right]
                     right-=1
                 tmp_max2 = height[re]
