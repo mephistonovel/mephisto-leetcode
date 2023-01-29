@@ -8,7 +8,7 @@ class Solution:
         ##참고: https://www.fun-coding.org/Chapter21-backtracking-live.html#gsc.tab=0
         
         ans = []
-        tmp = []
+
         cand = [i for i in range(n)]
 
         def check(tmp,new_num):
@@ -22,6 +22,7 @@ class Solution:
                 return True
 
         #rest = cand
+        tmp = []
         tmp_char = []
         def dfs(rest,tmp,tmp_char):
             if len(tmp)==n:
