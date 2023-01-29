@@ -17,13 +17,13 @@ class Solution:
             else:
                 current_row = len(tmp) # 현재 row는 tmp의 다음타자애 -> len(tmp)
                 for qrow in range(current_row):
-                    if abs(tmp[qrow]-new_num) == current_row-qrow:
+                    if abs(tmp[qrow]-new_num) == current_row-qrow: #대각선...
                         return False
                 return True
 
-        #rest = cand
         tmp = []
         tmp_char = []
+        
         def dfs(rest,tmp,tmp_char):
             if len(tmp)==n:
                 ans.append(tmp_char[:])
