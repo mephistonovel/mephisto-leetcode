@@ -5,12 +5,12 @@ class Solution:
         pos = des = 0
         count = 0
         for i in range(0,len(nums)-1): #len(nums)-1이 포인트... 끝에서 직전까지만 돌림 왜? 
-            des = max(des,nums[i]+i)
+            des = max(des,nums[i]+i) #아 여기서 des가 update 되는 게 포인트....긴 하네
             if (pos==i):
                 pos = des
                 count+=1
         
-        if pos>=(len(nums)-1):
+        if pos>=(len(nums)-1): # 그리고 왜 >= 인가 ==가 아니라? 
             return count
         return -1
 
