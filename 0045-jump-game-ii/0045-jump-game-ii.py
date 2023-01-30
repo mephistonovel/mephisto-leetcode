@@ -4,7 +4,7 @@ class Solution:
     def jump(self,nums: List[int]) -> int:
         pos = des = 0
         count = 0
-        for i in range(0,len(nums)-1):
+        for i in range(0,len(nums)-1): #len(nums)-1이 포인트... 끝에서 직전까지만 돌림 왜? 
             des = max(des,nums[i]+i)
             if (pos==i):
                 pos = des
