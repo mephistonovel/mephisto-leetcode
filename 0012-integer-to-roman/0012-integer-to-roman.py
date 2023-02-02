@@ -10,10 +10,7 @@ class Solution:
         # i=2 -> 100,500
         # i=3 -> 1000
         for i,n in enumerate(reversed(nums)):
-            if i==3:
-                print(ans,n)
-                print(int(n)<5)
-                
+
             if n=='4': 
                 ans.appendleft(htable[(10**i)*5])
                 ans.appendleft(htable[10**i])
