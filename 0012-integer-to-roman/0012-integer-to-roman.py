@@ -21,7 +21,7 @@ class Solution:
                 mod = int(n)%10
                 char = htable[10**i]*mod
                 ans.appendleft(char)
-            elif int(n)>=5:
+            elif n>='5':
                 rest = int(n)-5 
                 if rest == 0:
                     ans.appendleft(htable[(10**i)*5])
