@@ -1,5 +1,6 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
+        ########## https://leetcode.com/problems/minimum-window-substring/discuss/2732034/Easy-Approach-with-Explanation%3A-97.81-faster-than-others #############
         if t=="" or len(t) > len(s):
             return ""
     
