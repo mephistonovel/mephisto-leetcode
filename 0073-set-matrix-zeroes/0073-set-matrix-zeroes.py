@@ -17,10 +17,10 @@ class Solution:
                     
         for i in range(rows):
             for j in range(cols):        
-                if (i in r):
+                if (i in r) or (j in c):
                     matrix[i][j] = 0
                 
-                if (j in c):
-                    matrix[i][j] = 0
+                # if (j in c):
+                #     matrix[i][j] = 0
                     
         
