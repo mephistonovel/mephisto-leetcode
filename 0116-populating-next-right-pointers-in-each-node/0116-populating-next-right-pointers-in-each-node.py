@@ -13,28 +13,47 @@ class Solution:
         if not root:
             return None
         
-        vis_node = deque()
-        vis_node.appendleft(root)
+        q = deque([root])
         
-        i = 1
-        j=0
-        
-        
-        while vis_node:
-            x = vis_node.popleft()
+        while q:
+            qlen = len(q)
             
-            if i==2**j: 
-                x.next = None 
-                i=0
-                j+=1 
-            else:
-                x.next = vis_node[0]
+            for i in range(qlen):
+                x = q.popleft()
                 
+                if i == qlen-1:
+                    x.next = None
+                else:
+                    x.next = q[0]
                 
-            if x.left and x.right:
-                vis_node.append(x.left)
-                vis_node.append(x.right)
-            i+=1
+                if x.left and x.right:
+                    q.append(x.left)
+                    q.append(x.right)
         
         return root
+            
+#         vis_node = deque()
+#         vis_node.appendleft(root)
+        
+#         i = 1
+#         j=0
+        
+        
+#         while vis_node:
+#             x = vis_node.popleft()
+            
+#             if i==2**j: 
+#                 x.next = None 
+#                 i=0
+#                 j+=1 
+#             else:
+#                 x.next = vis_node[0]
+                
+                
+#             if x.left and x.right:
+#                 vis_node.append(x.left)
+#                 vis_node.append(x.right)
+#             i+=1
+        
+#         return root
         
