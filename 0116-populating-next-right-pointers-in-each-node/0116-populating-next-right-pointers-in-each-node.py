@@ -24,7 +24,7 @@ class Solution:
             x = vis_node.popleft()
             
             
-            if i==2**j: #or (not vis_node):
+            if i==2**j: 
                 x.next = None 
                 i=0
                 j+=1 
