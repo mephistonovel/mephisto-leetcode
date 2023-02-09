@@ -25,8 +25,6 @@ class Solution:
             
             
             if i==2**j or (not vis_node):
-                # print(f'# timing{i}', x.val)
-                # print(x.val, x.left.val if x.left else x.left,x.right.val if x.right else x.right,x.next)
                 x.next = None 
                 i=0
                 j+=1 
