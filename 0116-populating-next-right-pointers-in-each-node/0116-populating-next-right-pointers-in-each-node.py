@@ -23,7 +23,6 @@ class Solution:
         while vis_node:
             x = vis_node.popleft()
             
-            
             if i==2**j: 
                 x.next = None 
                 i=0
@@ -32,7 +31,6 @@ class Solution:
                 x.next = vis_node[0]
                 
                 
-            
             if x.left and x.right:
                 vis_node.append(x.left)
                 vis_node.append(x.right)
