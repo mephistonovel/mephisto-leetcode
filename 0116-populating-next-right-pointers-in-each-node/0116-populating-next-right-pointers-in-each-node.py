@@ -13,6 +13,8 @@ class Solution:
         if not root:
             return None
         
+        ###https://leetcode.com/problems/populating-next-right-pointers-in-each-node/discuss/2538153/Easy-C%2B%2B-Solution-with-comments-BFS###
+        
         q = deque([root])
         
         while q:
