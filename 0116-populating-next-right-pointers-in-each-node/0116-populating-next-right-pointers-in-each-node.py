@@ -16,7 +16,7 @@ class Solution:
         q = deque([root])
         
         while q:
-            qlen = len(q)
+            qlen = len(q) #이게 사실상 한 depth안에 있는 node 개수
             
             for i in range(qlen):
                 x = q.popleft()
@@ -31,7 +31,8 @@ class Solution:
                     q.append(x.right)
         
         return root
-            
+
+    #### 내 풀이 ### i,j로 none조건 결정
 #         vis_node = deque()
 #         vis_node.appendleft(root)
         
