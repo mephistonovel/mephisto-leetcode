@@ -26,9 +26,9 @@ class Solution:
                 
                 if i==lenq-1:
                     if j%2 == 0:
-                        ans.append(tmp[:])
+                        ans.append(tmp)
                     else:
-                        ans.append(reversed(tmp[:]))
+                        ans.append(reversed(tmp))
                     j+=1
                     tmp = []
                 
@@ -38,7 +38,6 @@ class Solution:
                 if x.right:
                     q.append(x.right)
                     
-            
             
         return ans
 
