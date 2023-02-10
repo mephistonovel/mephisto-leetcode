@@ -24,19 +24,28 @@ class Solution:
                 
                 tmp.append(x.val)
                 
-                if i==lenq-1:
-                    if j%2 == 0:
-                        ans.append(tmp)
-                    else:
-                        ans.append(reversed(tmp))
-                    j+=1
-                    tmp = []
+                # if i==lenq-1:
+                #     if j%2 == 0:
+                #         ans.append(tmp)
+                #     else:
+                #         ans.append(reversed(tmp))
+                #     j+=1
+                #     tmp = []
                 
            
                 if x.left:
                     q.append(x.left)
                 if x.right:
                     q.append(x.right)
+        
+        
+            if j%2 == 0:
+                ans.append(tmp)
+            else:
+                ans.append(reversed(tmp))
+            j+=1
+            tmp = []
+
                     
             
         return ans
