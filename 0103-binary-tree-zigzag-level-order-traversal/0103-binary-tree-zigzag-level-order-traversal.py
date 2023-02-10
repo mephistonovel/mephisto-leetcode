@@ -22,16 +22,7 @@ class Solution:
             for i in range(lenq):
                 x = q.popleft()
                 
-                tmp.append(x.val)
-                
-                # if i==lenq-1:
-                #     if j%2 == 0:
-                #         ans.append(tmp)
-                #     else:
-                #         ans.append(reversed(tmp))
-                #     j+=1
-                #     tmp = []
-                
+                tmp.append(x.val)                
            
                 if x.left:
                     q.append(x.left)
