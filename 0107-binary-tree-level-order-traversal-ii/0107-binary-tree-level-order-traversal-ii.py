@@ -30,5 +30,5 @@ class Solution:
             ans.append(tmp)
             tmp = []
         
-        return reversed(ans)
+        return ans[::-1]
         
