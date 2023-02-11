@@ -9,11 +9,11 @@ class Solution:
         if not root:
             return False
         
-        ans = []
+        ans = set()
         val = 0
         def dfs(r,val):
             if not r.left and not r.right:
-                ans.append(val)
+                ans.add(val)
                 return
             
             
