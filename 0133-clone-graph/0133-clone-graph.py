@@ -30,7 +30,7 @@ class Solution:
                     q.append(n)
                     visited[n] = Node(val=n.val, neighbors = [])
                     
-                visited[x].neighbors.append(visited[n])
+                visited[x].neighbors.append(visited[n]) # 이미 지나간 경우도 포함시킬 수 있게. 
 
         return new_node
                         
