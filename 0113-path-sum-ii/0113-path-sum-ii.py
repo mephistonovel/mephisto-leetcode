@@ -10,29 +10,28 @@ class Solution:
             return []
         
         
-        ans = {targetSum:[]}
+        # ans = {targetSum:[]}
         # vals = []
+        ank = []
         
-        def dfs(node,tmp):
-            # print(tmp)
+        def dfs(node,tmp,val):
             if not node.left and not node.right:
-                # print(tmp)
-                if sum(tmp[:]) == targetSum:
-                    ans[targetSum].append(tmp[:])
-                
-                # vals.append(val)
+                if val == targetSum:
+                    ank.append(tmp[:])
+                # if sum(tmp[:]) == targetSum:
+                #     ans[targetSum].append(tmp[:])
                 return
             
             if node.left:
-                dfs(node.left,tmp+[node.left.val])
+                dfs(node.left,tmp+[node.left.val],val+node.left.val)
                 
             if node.right:
-                dfs(node.right,tmp+[node.right.val])
+                dfs(node.right,tmp+[node.right.val],val+node.right.val)
             
             tmp = tmp[:-1] # 하...이게 늘 포인트지 dfs의
         
-        dfs(root,[root.val])
+        dfs(root,[root.val],root.val)
         
-        return ans[targetSum]
+        return ank
         
         
