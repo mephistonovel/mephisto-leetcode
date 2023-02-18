@@ -8,7 +8,7 @@ class Solution:
     def sumNumbers(self, root: Optional[TreeNode]) -> int:
         ans = []
         def dfs(node,tmp):
-            print(tmp)
+            
             if not node.left and not node.right:
                 
                 val = ''.join(tmp)
@@ -25,7 +25,6 @@ class Solution:
             tmp.pop()
         
         val_stroot = str(root.val)
-        print(ans)
         dfs(root,[val_stroot])
         
         return sum(ans)
