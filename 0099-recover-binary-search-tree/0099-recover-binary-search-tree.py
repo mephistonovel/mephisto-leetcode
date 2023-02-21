@@ -7,6 +7,7 @@
 
 
 ### two pointer +inorder ### https://leetcode.com/problems/recover-binary-search-tree/discuss/1962281/C%2B%2B-oror-Easy-to-understand
+#inorder는  sorting한 배열을 뱉어주니까...sort에서 틀린값이 있다면 해당 값들만 change! 
 class Solution:
     def __init__(self):
         self.first = None   
