@@ -10,12 +10,6 @@ class Solution:
         Do not return anything, modify root in-place instead.
         """
         # in order활용?
-        ans = []
-        check = dict()
-        
-        
-        
-        # dfs(root)
         change = set()
         def check(node):
             ans = []
@@ -56,14 +50,14 @@ class Solution:
                 if x.right:
                     q.append(x.right)
         
-        print(change)
+        # print(change)
         change = list(change)
         q2 = deque([root]) 
         if len(change) ==1:
             ch_pair = change[0]
         if len(change)>1:
-            if change[0][0] == change[1][0]:
-                ch_pair = (change[0][1],change[1][1])
+            # if change[0][0] == change[1][0]:
+            ch_pair = (change[0][1],change[1][1])
         while q2: 
             lenq = len(q2)
             for i in range(lenq):
@@ -75,6 +69,7 @@ class Solution:
                     q2.append(x.left)
                 if x.right:
                     q2.append(x.right)
+                    
 #         # def check(numbers,node_val):
 #         root_index = ans.index(root.val)
 #         left = ans[:root_index]
