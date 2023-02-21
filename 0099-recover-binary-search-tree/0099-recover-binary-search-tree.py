@@ -21,7 +21,10 @@ class Solution:
                     dfs(node.left)
                     ans.append(node.val)
                     dfs(node.right)
-
+                    
+                    
+            if not node:
+                return
             
             if node.left:
                 ans = []
