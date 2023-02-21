@@ -20,11 +20,8 @@ class Solution:
                 else:
                     dfs(node.left)
                     ans.append(node.val)
-                    dfs(node.right)
+                    dfs(node.right)                    
                     
-                    
-            if not node:
-                return
             
             if node.left:
                 ans = []
