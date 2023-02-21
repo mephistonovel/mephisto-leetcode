@@ -16,13 +16,6 @@ class Solution:
         """
         Do not return anything, modify root in-place instead.
         """
-        # in order활용?
-        
-        # pre = TreeNode(-2**31-1)
-        # first = second = None
-        
-        #inorder
-        
         self.dfs(root)
         self.first.val, self.second.val = self.second.val, self.first.val 
         
