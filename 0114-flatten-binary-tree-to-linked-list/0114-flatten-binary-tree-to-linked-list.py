@@ -14,6 +14,10 @@ class Solution:
         """
         if not root:
             return None 
+
+        ###https://leetcode.com/problems/flatten-binary-tree-to-linked-list/discuss/2672315/C%2B%2B-Solution-oror-Flatten-Binary-Tree-to-Linked-List
+        
+        
         
         curr = root
         
