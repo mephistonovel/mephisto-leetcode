@@ -21,8 +21,7 @@ class Solution:
                     dfs(node.left)
                     ans.append(node.val)
                     dfs(node.right)
-            if not node:
-                return
+
             
             if node.left:
                 ans = []
@@ -50,7 +49,7 @@ class Solution:
                 if x.right:
                     q.append(x.right)
         
-        # print(change)
+        # print(change) #{(2,3),(2,1)}
         change = list(change)
         q2 = deque([root]) 
         if len(change) ==1:
