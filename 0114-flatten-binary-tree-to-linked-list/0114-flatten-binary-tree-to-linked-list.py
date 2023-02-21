@@ -16,7 +16,9 @@ class Solution:
             return None 
 
         #https://leetcode.com/problems/flatten-binary-tree-to-linked-list/discuss/36977/My-short-post-order-traversal-Java-solution-for-share
-        # Post order
+        # Post order 변형
+        # 원래는 342 -> 65 -> 1
+        # 지금은 65-> 432 -> 1 
         
         self.flatten(root.right)
         self.flatten(root.left)
