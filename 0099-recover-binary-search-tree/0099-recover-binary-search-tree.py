@@ -5,43 +5,37 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+    def __init__(self):
+        self.first = None   
+        self.second = None
+        self.pre = TreeNode(-2**31-1)
     def recoverTree(self, root: Optional[TreeNode]) -> None:
         """
         Do not return anything, modify root in-place instead.
         """
         # in order활용?
         
-        ans = []
+        # pre = TreeNode(-2**31-1)
+        # first = second = None
         
-        def dfs(node):
-            if not node:
-                return
-            else:
-                dfs(node.left)
-                ans.append(node.val)
-                dfs(node.right)
+        #inorder
         
-        dfs(root)
-        sort_ans = sorted(ans)
-        ch_pair = []
-        # print(ans)
-        # print(sort_ans)
-        for a1,a2 in zip(ans,sort_ans):
-            if a1!=a2:
-                ch_pair.append(a1)
+        self.dfs(root)
+        self.first.val, self.second.val = self.second.val, self.first.val 
         
-        q2 = deque([root])
-        while q2: 
-            lenq = len(q2)
-            for i in range(lenq):
-                x = q2.popleft()
-                if x.val in ch_pair:
-                    x.val = list(set(ch_pair)-{x.val})[0]
+    def dfs(self, node):
+        if not node:
+            return
+        else:
+            self.dfs(node.left)
+            if self.first == None and node.val<self.pre.val:
+                self.first = self.pre
+            if self.first != None and node.val<self.pre.val:
+                self.second = node
+            self.pre = node
 
-                if x.left:
-                    q2.append(x.left)
-                if x.right:
-                    q2.append(x.right)
+            self.dfs(node.right)
+
         
 
 #############15%defeat##########
