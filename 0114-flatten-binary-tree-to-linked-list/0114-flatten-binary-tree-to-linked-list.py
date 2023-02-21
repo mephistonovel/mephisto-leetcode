@@ -5,9 +5,9 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    # def __init__(self):
-    #     self.ans = TreeNode()
-    #     self.tmp = self.ans
+    def __init__(self):
+        self.prev = None
+        
     def flatten(self, root: Optional[TreeNode]) -> None:
         """
         Do not return anything, modify root in-place instead.
@@ -15,33 +15,32 @@ class Solution:
         if not root:
             return None 
 
+        #https://leetcode.com/problems/flatten-binary-tree-to-linked-list/discuss/36977/My-short-post-order-traversal-Java-solution-for-share
+        # Post order
+        
+        self.flatten(root.right)
+        self.flatten(root.left)
+        root.right = self.prev
+        root.left = None
+        self.prev = root
+        
+        
         ###https://leetcode.com/problems/flatten-binary-tree-to-linked-list/discuss/2672315/C%2B%2B-Solution-oror-Flatten-Binary-Tree-to-Linked-List
+    
+#         curr = root
         
-        
-        
-        curr = root
-        
-        while curr:
-            if curr.left:
-                pred = curr.left
-                while pred.right:
-                    pred = pred.right
+#         while curr:
+#             if curr.left:
+#                 pred = curr.left
+#                 while pred.right:
+#                     pred = pred.right
                 
-                pred.right = curr.right 
-                curr.right = curr.left
-                curr.left = None
+#                 pred.right = curr.right 
+#                 curr.right = curr.left
+#                 curr.left = None
             
-            curr = curr.right
+#             curr = curr.right
             
                 
                 
                 
-#         for val in ans:
-#             # print(ans_node)
-#             tmp_node.val = val
-#             tmp_node.right = TreeNode()
-#             tmp_node = tmp_node.right
-            
-#         root = ans_node
-#         print(root)
-        
