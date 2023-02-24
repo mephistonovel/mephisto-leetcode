@@ -23,7 +23,7 @@ class Solution:
                     i2-=1 
                 
             
-        print(dif)
+        # print(dif)
         
         return dif[sorted(list(dif.keys()))[0]]
             
