@@ -11,6 +11,8 @@ class Solution:
             return head
         
         p, slow, fast = None, head, head
+        
+        # p:slow전까지, slow~끝까지로 분할 됨 
         while fast and fast.next:
             p = slow
             slow = slow.next
@@ -31,6 +33,7 @@ class Solution:
                 # ans.val = n2.val
                 # n2 = n2.next
                 ans.next,n2 = n2,n2.next
+            # ans.next = ListNode()
             ans = ans.next
         
         if n1:
@@ -41,7 +44,7 @@ class Solution:
         if n2:
             ans.next = n2
       
-        
+        # return final 
         return final.next
                 
         
