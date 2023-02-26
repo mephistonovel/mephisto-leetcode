@@ -24,24 +24,25 @@ class Solution:
         
         while n1 and n2:
             if n1.val<=n2.val:
-                ans.val = n1.val
-                n1=n1.next
+                # ans.val = n1.val
+                # n1=n1.next
+                ans.next,n1 = n1,n1.next
             else:
-                ans.val = n2.val
-                n2 = n2.next
-            ans.next = ListNode()
+                # ans.val = n2.val
+                # n2 = n2.next
+                ans.next,n2 = n2,n2.next
             ans = ans.next
         
         if n1:
-            ans.val = n1.val
-            ans.next = n1.next
+            # ans.val = n1.val
+            # ans.next = n1.next
+            ans.next = n1
         
         if n2:
-            ans.val = n2.val
-            ans.next = n2.next
+            ans.next = n2
       
         
-        return final
+        return final.next
                 
         
         
