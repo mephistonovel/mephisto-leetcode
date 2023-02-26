@@ -32,22 +32,14 @@ class Solution:
             ans.next = ListNode()
             ans = ans.next
         
-        while n1 and n1.next:
-            ans.val = n1.val 
-            ans.next=ListNode()
-            ans = ans.next
-            n1 = n1.next
-        
-        while n2 and n2.next:
-            ans.val = n2.val
-            ans.next = ListNode()
-            ans = ans.next
-            n2 = n2.next
-        
         if n1:
             ans.val = n1.val
+            ans.next = n1.next
+        
         if n2:
             ans.val = n2.val
+            ans.next = n2.next
+      
         
         return final
                 
