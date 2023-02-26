@@ -46,8 +46,6 @@ class Solution:
     
     
         mergesort(intervals)
-        
-        # print(intervals)
             
         ## after sorting
         tmp_low = intervals[0][0]
@@ -74,7 +72,6 @@ class Solution:
                     ans.pop()
                     ans.append([tmp_low,tmp_end])
                     
-            
             else:
                 if not ans:
                     ans.append([tmp_low,tmp_end])
