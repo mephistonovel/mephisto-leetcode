@@ -56,6 +56,7 @@ class Solution:
             low = intervals[i][0]
             end = intervals[i][1]
             
+            # case1. [1,4],[2,5]
             if tmp_low<=low<=tmp_end and end>=tmp_end:
                 if not ans or ans[-1][0]!=tmp_low:
                     ans.append([tmp_low,end])
@@ -65,13 +66,15 @@ class Solution:
                     
                 tmp_end = end
                 
+            # case2. [1,4],[2,3]    
             elif tmp_low<=low<=tmp_end and end<tmp_end:
                 if not ans or ans[-1][0]!=tmp_low:
                     ans.append([tmp_low,tmp_end])
                 if ans and ans[-1][0]==tmp_low:
                     ans.pop()
                     ans.append([tmp_low,tmp_end])
-                    
+            
+            #case3. [1,4],[5,6]
             else:
                 if not ans:
                     ans.append([tmp_low,tmp_end])
