@@ -47,7 +47,7 @@ class Solution:
     
         mergesort(intervals)
         
-        print(intervals)
+        # print(intervals)
             
         ## after sorting
         tmp_low = intervals[0][0]
