@@ -2,51 +2,53 @@ class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         if len(intervals)==1:
             return intervals 
-        
+
         ## sorting based on the first element of each element ##
         # https://www.daleseo.com/sort-merge/ 
-        def mergesort(nlist):
-            def sort(low, high):
-                if high-low>=2:
-                    mid = (high+low)//2
-                    sort(low,mid)
-                    sort(mid,high)
-                    merge(low,mid,high)         
+#         def mergesort(nlist):
+#             def sort(low, high):
+#                 if high-low>=2:
+#                     mid = (high+low)//2
+#                     sort(low,mid)
+#                     sort(mid,high)
+#                     merge(low,mid,high)         
                     
-            def merge(l,m,h):
-                tmp = []
-                i=l
-                j=m
-                while i<m and j<h:
-                    if nlist[i][0] < nlist[j][0]:
-                        tmp.append(nlist[i])
-                        i+=1
-                    elif nlist[i][0] > nlist[j][0]:
-                        tmp.append(nlist[j])
-                        j+=1
-                    else:
-                        if nlist[i][1] < nlist[j][1]:
-                            tmp.append(nlist[i])
-                            i+=1
-                        else:
-                            tmp.append(nlist[j])
-                            j+=1
-                while i<m:
-                    tmp.append(nlist[i])
-                    i+=1
-                while j<h:
-                    tmp.append(nlist[j])
-                    j+=1
+#             def merge(l,m,h):
+#                 tmp = []
+#                 i=l
+#                 j=m
+#                 while i<m and j<h:
+#                     if nlist[i][0] < nlist[j][0]:
+#                         tmp.append(nlist[i])
+#                         i+=1
+#                     elif nlist[i][0] > nlist[j][0]:
+#                         tmp.append(nlist[j])
+#                         j+=1
+#                     else:
+#                         if nlist[i][1] < nlist[j][1]:
+#                             tmp.append(nlist[i])
+#                             i+=1
+#                         else:
+#                             tmp.append(nlist[j])
+#                             j+=1
+#                 while i<m:
+#                     tmp.append(nlist[i])
+#                     i+=1
+#                 while j<h:
+#                     tmp.append(nlist[j])
+#                     j+=1
                 
-                # print(tmp)
+#                 # print(tmp)
                 
-                for r in range(l,h):
-                    nlist[r] = tmp[r-l]
-            return sort(0,len(nlist))
+#                 for r in range(l,h):
+#                     nlist[r] = tmp[r-l]
+#             return sort(0,len(nlist))
     
     
-        mergesort(intervals)
-            
+#         mergesort(intervals)
+        
+        intervals.sort()
+        
         ## after sorting
         tmp_low = intervals[0][0]
         tmp_end = intervals[0][1]
