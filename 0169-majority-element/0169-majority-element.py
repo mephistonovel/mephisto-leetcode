@@ -13,7 +13,7 @@ class Solution:
             else:
                 check[n]+=1
         
-        print(check)
+        # print(check)
         ans = 0
         for n,item in check.items():
             if item>std:
