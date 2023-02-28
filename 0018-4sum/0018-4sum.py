@@ -74,8 +74,8 @@ class Solution:
             # n0 = nums[i]
             for j in range(i+1,length-2):
                 if j>i+1 and nums[j]==nums[j-1]: continue
-                # n1 = nums[j]    
-                targ = target - nums[i]-nums[j]
+                n1 = nums[j]    
+                targ = target - nums[i]-n1
                 k = j+1 
                 l = len(nums)-1
                 
@@ -85,7 +85,7 @@ class Solution:
                     elif nums[k]+nums[l]>targ:
                         l-=1 
                     else:
-                        ans.append([nums[i],nums[j],nums[k],nums[l]])
+                        ans.append([nums[i],n1,nums[k],nums[l]])
                     
                         low_ = nums[k]
                         high_ = nums[l]
