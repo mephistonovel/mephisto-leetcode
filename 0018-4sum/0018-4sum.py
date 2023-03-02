@@ -15,6 +15,7 @@ class Solution:
         for i in range(length-3):
             if i>0 and nums[i]==nums[i-1]: continue
             n0 = nums[i]
+            # print(i)
             for j in range(i+1,length-2):
                 if j>i+1 and nums[j]==nums[j-1]: continue
                 n1 = nums[j]    
@@ -30,8 +31,6 @@ class Solution:
                     else:
                         ans.append([n0,n1,nums[k],nums[l]])
                     
-                        low_ = nums[k]
-                        high_ = nums[l]
 
                         while k<l and nums[k]==nums[k+1]:
                             k+=1
