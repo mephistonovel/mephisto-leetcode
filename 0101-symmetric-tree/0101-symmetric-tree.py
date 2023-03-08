@@ -8,23 +8,38 @@ class Solution:
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
         if not root.left and not root.right:
             return True
-        
-        #preorder
-        def check(node1,node2):
-            if not node1 and not node2:
-                return True
-            if not (node1 and node2):
+        ### stack ### 
+        #https://leetcode.com/problems/symmetric-tree/discuss/33325/Python-short-recursive-and-iterative-solutions
+        stack = [(root.left,root.right)]
+        while stack:
+            l,r = stack.pop()
+            if not l and not r:
+                continue
+            if not l or not r or (l.val != r.val):
                 return False
+            stack.append((l.left,r.right))
+            stack.append((l.right,r.left))
+        
+        return True
             
-            if node1.val !=node2.val:
-                return False 
+        
+#         #preorder recursion
+#         def check(node1,node2):
+#             if not node1 and not node2:
+#                 return True
+#             if not (node1 and node2):
+#                 return False
             
-            l = check(node1.left,node2.right)
-            r = check(node1.right,node2.left)
+#             if node1.val !=node2.val:
+#                 return False 
             
-            return (l and r)
+#             l = check(node1.left,node2.right)
+#             r = check(node1.right,node2.left)
+            
+#             return (l and r)
         
         
-        return check(root.left,root.right)
+#         return check(root.left,root.right)
+
     
         
