@@ -11,21 +11,26 @@ class Solution:
         for i,j in edges:
             adj[i].add(j)
             adj[j].add(i)
-        
-        # adj list에서 length가 1인건 무조건 리프
-        leaves = [i for i in range(n) if len(adj[i])==1]
-        
-        while n>2:
-            n-=len(leaves)
-            new_l=[]
-            for leaf in leaves:
-                nei = adj[leaf].pop()
-                adj[nei].remove(leaf)
-                
-                if len(adj[nei])==1:
-                    new_l.append(nei)
-            leaves = new_l
-        return leaves
+            
+        queue,degrees = [],{}
+        for node, neighbors in adj.items():
+            degrees[node] = len(neighbors)
+            # Insert all leaves into our priority queue.
+            if degrees[node] == 1:
+                queue.append(node)
+        ans = []
+        while queue:
+            nodes = []
+            while queue:
+                nodes.append(queue.pop())
+            ans = nodes
+            for node in nodes:
+                degrees[node] -= 1
+                for neighbor in adj[node]:
+                    degrees[neighbor] -= 1
+                    if degrees[neighbor] == 1:
+                        queue.append(neighbor)
+        return ans
 #         # dfs code
 #         visited = [False]*n
 #         ans=[]
