@@ -16,15 +16,15 @@ class Solution:
                 self.graph[equations[i][0]]=[]
             if equations[i][1] not in self.graph:
                 self.graph[equations[i][1]]=[]
-            self.graph[equations[i][0]].append((equations[i][1],values[i]))
-            self.graph[equations[i][1]].append((equations[i][0],1/values[i]))
+            self.graph[equations[i][0]].append((equations[i][1],1/values[i]))
+            self.graph[equations[i][1]].append((equations[i][0],values[i]))
         v=[]
         for i in queries:
             self.visited=set()
             if i[0] not in self.graph or i[1] not in self.graph:
                 v.append(-1)
                 continue
-            v.append( self.answer(i[0],i[1],1) if i[0]!=i[1] else 1)
+            v.append( 1/self.answer(i[0],i[1],1) if i[0]!=i[1] else 1)
         return v
                     
                     
