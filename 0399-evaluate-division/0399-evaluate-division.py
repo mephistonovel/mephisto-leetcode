@@ -1,4 +1,5 @@
 class Solution:
+    #https://leetcode.com/problems/evaluate-division/discuss/1992888/Python3-or-DFS
     def answer(self, current, end, scalar):
         if current==end: return scalar
         self.visited.add(current)
