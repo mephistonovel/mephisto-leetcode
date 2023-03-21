@@ -5,9 +5,7 @@ class Solution:
         """
         k=k%len(nums)
         front = nums[-k:]
-        # print(front)
         nums[:] = front+nums[:-k]
-        # print(nums)
 
         # if len(nums)<=1 or k==len(nums):
         #     pass
