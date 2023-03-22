@@ -20,7 +20,8 @@ class Solution:
         for i,j in zip(a[::-1],b[::-1]):
             a1=(int(i))
             b1 =(int(j))
-            res = xor(xor(a1,b1),tmp)
+            # res = xor(xor(a1,b1),tmp)
+            res = tmp^(a1^b1)
             
             ans+=str(int(res))
             if a1+b1+tmp>=2:
