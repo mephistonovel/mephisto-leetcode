@@ -18,8 +18,8 @@ class Solution:
         tmp = 0
         
         for i,j in zip(a[::-1],b[::-1]):
-            a1=bool(int(i))
-            b1 =bool(int(j))
+            a1=(int(i))
+            b1 =(int(j))
             res = xor(xor(a1,b1),tmp)
             
             ans+=str(int(res))
