@@ -9,7 +9,6 @@ class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         if not root:
             return 0
-        ans = []
         def dfs(node,dep):
             if not node.left and not node.right:
                 self.maxdep = max(dep,self.maxdep)
