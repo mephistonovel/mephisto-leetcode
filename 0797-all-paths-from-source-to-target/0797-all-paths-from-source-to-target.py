@@ -1,19 +1,35 @@
 class Solution:
     def allPathsSourceTarget(self, graph: List[List[int]]) -> List[List[int]]:
-        ans = []
-        des = len(graph)-1
-        def dfs(node,path):
-            if node == des:
-                ans.append(path[:])
+        paths = []
+        visited = set()
+        end = len(graph)-1
+        def dfs(node, path):
+            visited.add(node)
+            path.append(node)
 
-            for neighbor in graph[node]:
-                path.append(neighbor)
-                dfs(neighbor,path)
-                path.pop()
+            if node == end:
+                paths.append(path[:])
+            else:
+                for neighbor in graph[node]:
+                    if neighbor not in visited:
+                        dfs(neighbor, path)
 
-              # if neighbor.color == 'W':
-              #   neighbor.color = 'R'
-              
-        # s.color = 'R'
-        dfs(0,[0])
-        return ans
+            visited.remove(node)
+            path.pop()
+
+        dfs(0, [])
+        return paths
+#         ans = []
+#         des = len(graph)-1
+#         def dfs(node,path):
+#             if node == des:
+#                 ans.append(path[:])
+
+#             for neighbor in graph[node]:
+#                 path.append(neighbor)
+#                 dfs(neighbor,path)
+#                 path.pop()
+
+         
+#         dfs(0,[0])
+#         return ans
