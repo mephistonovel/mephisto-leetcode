@@ -6,6 +6,7 @@ class Solution:
         
         word_count = Counter(word)
         board_count = Counter(''.join([''.join(row) for row in board])) #flatten array to one string
+        print(board_count)
         
         #Don't need to search if a certain character appears more often in word than in board
         for char in word:
